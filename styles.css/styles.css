@@ -1,0 +1,27 @@
+:root {
+    --block-width: 100px;
+    --block-height: 100px;
+    --distance: 10px;
+}
+
+#container {
+    margin: 10px;
+    padding: var(--distance) 0 0 var(--distance);
+    border: 3px solid black;
+
+    /* в эту функциюю вставляются арифметические переменные */
+    width: calc(var(--block-width) * 7 + var(--distance) * 7 );
+    min-height: calc(var(--block-height) + var(--distance));
+
+    display: flex;
+    /* чтобы переходило на другую строку */
+    flex-wrap: wrap; 
+}
+
+.block {
+    width:var(--block-width);
+    height: var(--block-height);
+    background-color: black;
+    margin: 0 var(--distance) var(--distance) 0;
+ 
+}
